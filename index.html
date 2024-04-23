@@ -2,90 +2,111 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 
     <style>
         html {
             scroll-behavior: smooth;
         }
+
+        @keyframes animate {
+            100% {
+                transform: scaleX(1);
+            }
+        }
     </style>
 </head>
 
-<body class="p-4 " data-bs-theme="dark">
+<body class="px-52 py-5 mt-0 bg-gray-900 space-y-40" data-bs-theme="dark">
+    <div class="h-[90vh]">
+        <!-- Top Section  -->
+        <nav class="flex flex-col md:flex-row items-center gap-4 container mx-auto mt-2 my-12">
+            <img class="w-20 h-20 md:w-40 h-40 rounded-full" src="Images/myPic.png" alt="" />
+            <p class="text-3xl font-bold">@Ali Raza</p>
+            <ul class="flex border rounded-full md:ml-auto">
+                <li class="px-6 py-4 border rounded-full text-xl">
+                    <a href="#about">Home</a>
+                </li>
+                <li class="px-6 py-4 text-xl"><a href="#About">About</a></li>
+                <li class="px-6 py-4 text-xl"><a href="#skills">Skills</a></li>
+                <li class="px-6 py-4 text-xl"><a href="#Projects">Projects</a></li>
+                <li class="px-6 py-4 text-xl"><a href="#solutions">Contact</a></li>
+            </ul>
+        </nav>
 
-    <!-- Nav bar  -->
-    <nav class="flex flex-col md:flex-row items-center gap-4 container mx-auto my-12">
-        <img class="w-20 h-20 md:w-40 h-40 rounded-full  " src="WhatsApp Image 2023-09-02 at 01.30.16.jpg" alt="">
-        <p class="text-3xl font-bold ">@Ali Raza</p>
-        <ul class="flex border rounded-full md:ml-auto">
-            <li class="px-6 py-4 border rounded-full text-xl"><a href="#about">Home</a></li>
-            <li class="px-6 py-4 text-xl "><a href="#About">About</a></li>
-            <li class="px-6 py-4 text-xl "><a href="#skills">Skills</a></li>
-            <li class="px-6 py-4 text-xl"><a href="#Projects">Projects</a></li>
-            <li class="px-6 py-4 text-xl"><a href="#solutions">Contact</a></li>
-        </ul>
-    </nav>
+        <header class="container px-auto mx-auto mt-[24vh]" id="#About">
+            <h2 class="text-7xl text-center ">
+                Hello, I'm Ali Raza <br />
+                A Web & AI chatbot developer in training.
+            </h2>
 
-    <!-- Header -->
-    <header class="container mx-auto my-12" id="#About">
-        <h2 class="text-5xl">Hello, I'm Ali raza, <br>A Web & AI chatbot developer in training.</h2>
-        <h4 class="text-xl my-6">This is my partfolio website. Here you can explore my work and skills.</h4>
-
-        <div class="flex gap-1">
-            <a class="bg-gray-800 text-white  p-4  text-2xl rounded-full hover:opacity-80" href="#Projects">Explore
-                Work</a>
-            <a class="bg-purple-900 text-white p-4 rounded-full hover:opacity-80 group" href="#Projects">
-                <svg xmlns="http://www.w3.org/2000/svg" class="transition -rotate-45 group-hover:-rotate-0" width="24"
-                    height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M5 12l14 0"></path>
-                    <path d="M13 18l6 -6"></path>
-                    <path d="M13 6l6 6"></path>
-                </svg>
-            </a>
-        </div>
-    </header>
+            <div class="flex mt-10 space-x-3 mx-auto">
+                <a class="bg-blue-800 text-white p-4 text-2xl rounded-full hover:opacity-80" href="#Projects">Explore
+                    Work</a>
+                <a class="bg-sky-800 text-white p-4 rounded-full hover:opacity-80 group" href="#Projects">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="transition -rotate-45 group-hover:-rotate-0"
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M5 12l14 0"></path>
+                        <path d="M13 18l6 -6"></path>
+                        <path d="M13 6l6 6"></path>
+                    </svg>
+                </a>
+            </div>
+        </header>
+    </div>
 
     <!-- About section -->
+
     <section class="container mx-auto my-11" id="About">
         <!-- class="md:max-w-2xl lg:max-w-3xl xl:max-w-5xl ml-auto" PHLE ABOUT K DIV KI CLASS YA THI -->
         <div class="ml-auto">
             <h1 class="text-5xl leading-10q my-6">About Me</h1>
 
-            <h3 class="text-2xl leading-9 my-6">  Hello! I’m Ali Raza, an 18-year-old passionate about web development, AI, and chatbots. Let me share a bit about my journey:
-                <p class="mt-4">Hey there! I'm Ali Raza, an 18-year-old with an insatiable passion for web development, AI, and the
-                    fascinating world of chatbots. Let me take you on a brief journey through my experiences:
-
-                    My academic journey began at St. Lawrence’s High School, where I completed my matriculation. I then
-                    continued my educational pursuit at the esteemed Government College of Commerce and Economic for my
-                    intermediate studies.
-
-                    Fuelled by my profound love for technology, I embarked on a quest to explore various programming
-                    languages and tools. Presently, my skill set includes:
+            <h3 class="text-2xl leading-9 my-6">
+                Hello! I’m Ali Raza, an 18-year-old passionate about web development,
+                AI, and chatbots. Let me share a bit about my journey:
+                <p class="mt-4">
+                    Hey there! I'm Ali Raza, an 18-year-old with an insatiable passion
+                    for web development, AI, and the fascinating world of chatbots. Let
+                    me take you on a brief journey through my experiences: My academic
+                    journey began at St. Lawrence’s High School, where I completed my
+                    matriculation. I then continued my educational pursuit at the
+                    esteemed Government College of Commerce and Economic for my
+                    intermediate studies. Fuelled by my profound love for technology, I
+                    embarked on a quest to explore various programming languages and
+                    tools. Presently, my skill set includes:
                     <li class="list-style-type: disc">HTML</li>
                     <li class="list-style-type: disc">CSS</li>
-                    <li class="list-style-type: disc"> Currently delving into TypeScript</li>
-                    <li class="list-style-type: disc"> Proficient in Tailwind CSS</li>
+                    <li class="list-style-type: disc">
+                        Currently delving into TypeScript
+                    </li>
+                    <li class="list-style-type: disc">Proficient in Tailwind CSS</li>
                     <li class="list-style-type: disc">JavaScript enthusiast</li>
                     <li class="list-style-type: disc">Comfortable with MongoDB</li>
-                    <li class="list-style-type: disc"> Well-versed in Node.js</li>
-                    My expertise lies in crafting robust web applications using the MERN stack, always with a keen eye
-                    on enhancing user experience. But that's not all – I'm also immersing myself in the dynamic realms
-                    of AI and chatbot development, eager to unravel their endless possibilities.<br>
-                    If you're as passionate about these fields as I am, don't hesitate to connect! I'm always on the
-                    lookout for exciting collaborations and projects that push the boundaries of innovation. Let's
-                    create something extraordinary together! 🚀
+                    <li class="list-style-type: disc">Well-versed in Node.js</li>
+                    My expertise lies in crafting robust web applications using the MERN
+                    stack, always with a keen eye on enhancing user experience. But
+                    that's not all – I'm also immersing myself in the dynamic realms of
+                    AI and chatbot development, eager to unravel their endless
+                    possibilities.<br />
+                    If you're as passionate about these fields as I am, don't hesitate
+                    to connect! I'm always on the lookout for exciting collaborations
+                    and projects that push the boundaries of innovation. Let's create
+                    something extraordinary together! 🚀
+                </p>
             </h3>
-            <a class="flex gap-2 items-center font-semibold underline text-2xl" href="Resume.jpg" download="Resume">
+
+            <a class="flex gap-2 items-center font-semibold underline text-2xl" href="Images/Resume.jpg" download="Resume">
                 Download Resume
-                <span class="bg-purple-900 text-white p-2 rounded-full hover:opacity-80 group">
+                <span class="bg-sky-800 text-white p-2 rounded-full hover:opacity-80 group">
                     <svg xmlns="http://www.w3.org/2000/svg" class="transition -rotate-45 group-hover:-rotate-0"
                         width="15" height="15" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none"
                         stroke-linecap="round" stroke-linejoin="round">
@@ -99,66 +120,97 @@
         </div>
     </section>
 
+    <!-- Skills section -->
 
-    <!-- skills section -->
-
-
+    <div class="mx-auto">
+        <div class="text-[#f0f0e6] mb-2">
+            <span class="text-base font-medium">TAILWIND CSS</span>
+        </div>
+        <div
+            class="w-[100%] relative h-2.5 w-[200px] min-[300px]:w-[250px] min-[400px]:w-[350px] sm:w-[500px] md:w-[600px] lg:w-[700px] bg-[#f0f0f0] origin-left animate-[animate_1s_cubic-bezier(1,0,0.5,1)_forwards] rounded-[10px] scale-x-0">
+            <span
+                class="w-[95%] after:content-[&quot;95%&quot;] absolute bg-[#25b79f] h-full origin-left animate-[animate_1s_1s_cubic-bezier(1,0,0.5,1)_forwards] rounded-[10px] scale-x-0 before:absolute before:content-[&quot;&quot;] before:h-0 before:w-0 before:border-r-0 before:border-t-[#f0f0f0] before:border-b-0 before:border-[7px] before:border-solid before:border-transparent before:right-0 before:-top-3 after:absolute after:text-[#07374a] after:text-xs after:font-bold after:bg-[#f0f0f0] after:px-2 after:py-px after:rounded-[3px] after:right-0 after:-top-7 c"></span>
+        </div>
+    </div>
 
     <!-- Projects section -->
+
     <section class="container mx-auto my-12" id="Projects">
         <h1 class="text-5xl leading-10q my-6">Projects</h1>
         <div class="card-group gap-4">
             <div class="card">
-                <img src="Calculator.PNG" class="card-img-top h-50" alt="..."
-                    class="img-fluid w-40 h-16 rounded d-block mb-4 ">
+                <img src="Images/Project-1.png" class="card-img-top h-50" alt="..."
+                    class="img-fluid w-40 h-16 rounded d-block mb-4" />
                 <div class="card-body">
                     <h5 class="card-title text-3xl font-bold">Calculator</h5>
                     <p class="card-text text-xl">
-                        "Empower your daily calculations with my progressive web app calculator, designed for efficiency
-                        and accessibility."</p>
-                    <a href="https://calculator-bice-alpha.vercel.app/"><button class="btn btn-primary btn-lg btn-block mt-4 bg-green-500">View</button></a>
-                    <a href="https://github.com/ALIRAZA4278/Calculator"><button class="btn btn-primary btn-lg btn-block mt-4 bg-red-500">Source
-                            Code</button></a>
+                        "Empower your daily calculations with my progressive web app
+                        calculator, designed for efficiency and accessibility."
+                    </p>
+                    <a href="https://calculator-bice-alpha.vercel.app/"><button
+                            class="btn btn-primary btn-lg duration-[400ms] btn-block mt-4 bg-blue-800 border-2 border-gray-900 hover:bg-gray-900 hover:border-gray-900">
+                            View
+                        </button></a>
+                    <a href="https://github.com/ALIRAZA4278/Calculator"><button
+                            class="btn btn-primary btn-lg duration-[400ms] btn-block mt-4 bg-gray-900">
+                            Source Code
+                        </button></a>
                 </div>
                 <div class="card-footer">
-                    <small class="text-body-secondary text-sm">Email: af912923@gmail.com </small>
+                    <small class="text-body-secondary text-sm">Email: af912923@gmail.com
+                    </small>
                 </div>
             </div>
             <div class="card">
-                <img src="news app.PNG" class="card-img-top h-50" alt="...">
+                <img src="Images/Project-2.png" class="card-img-top h-50" alt="..." />
                 <div class="card-body">
                     <h5 class="card-title text-3xl font-bold">News App</h5>
                     <p class="card-text text-xl">
-                        "Stay informed with my intuitive news progressive web app, delivering curated updates right at
-                        your fingertips."
+                        "Stay informed with my intuitive news progressive web app,
+                        delivering curated updates right at your fingertips."
                     </p>
-                    <a href="https://weather-app-sigma-mocha-92.vercel.app/"><button class="btn btn-primary btn-lg btn-block mt-4 bg-green-500">View</button></a>
-                    <a href="https://github.com/ALIRAZA4278/News-App"><button class="btn btn-primary btn-lg btn-block mt-4 bg-red-500">Source
-                            Code</button></a>
-                            
+                    <a href="https://weather-app-sigma-mocha-92.vercel.app/"><button
+                            class="btn btn-primary btn-lg duration-[400ms] btn-block mt-4 bg-blue-800 border-2 border-gray-900 hover:bg-gray-900 hover:border-gray-900">
+                            View
+                        </button></a>
+                    <a href="https://github.com/ALIRAZA4278/News-App"><button
+                            class="btn btn-primary btn-lg duration-[400ms] btn-block mt-4 bg-gray-900">
+                            Source Code
+                        </button></a>
                 </div>
                 <div class="card-footer text-xl">
-                    <small class="text-body-secondary">Email: af912923@gmail.com </small>
+                    <small class="text-body-secondary">Email: af912923@gmail.com
+                    </small>
                 </div>
             </div>
             <div class="card">
-                <img src="Weather app.PNG" class="card-img-top h-50" alt="..."  > 
+                <img src="Images/Project-3.png" class="card-img-top h-50" alt="..." />
                 <div class="card-body">
-                    <h5 class="card-title text-3xl font-bold" >Weather App</h5>
-                    <p class="card-text text-xl">"Plan your day with precision using my user-friendly weather progressive web app, providing real-time forecasts tailored to your location."</p>
-                    <a href="https://weather-app-sigma-mocha-92.vercel.app/"><button class="btn btn-primary btn-lg btn-block mt-4 bg-green-500">View</button></a>
-                    <a href="https://github.com/ALIRAZA4278/Weather-app"><button class="btn btn-primary btn-lg btn-block mt-4 bg-red-500">Source
-                            Code</button></a>
+                    <h5 class="card-title text-3xl font-bold">Weather App</h5>
+                    <p class="card-text text-xl">
+                        "Plan your day with precision using my user-friendly weather
+                        progressive web app, providing real-time forecasts tailored to
+                        your location."
+                    </p>
+                    <a href="https://weather-app-sigma-mocha-92.vercel.app/"><button
+                            class="btn btn-primary btn-lg duration-[400ms] btn-block mt-4 bg-blue-800 border-2 border-gray-900 hover:bg-gray-900 hover:border-gray-900">
+                            View
+                        </button></a>
+                    <a href="https://github.com/ALIRAZA4278/Weather-app"><button
+                            class="btn btn-primary btn-lg duration-[400ms] btn-block mt-4 bg-gray-900">
+                            Source Code
+                        </button></a>
                 </div>
                 <div class="card-footer text-xl">
-                    <small class="text-body-secondary">Email: af912923@gmail.com </small>
+                    <small class="text-body-secondary">Email: af912923@gmail.com
+                    </small>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Contact section -->
 
-    <!-- contact section -->
     <footer class="bg-gray-900 text-white py-12 p-4 -m-4" id="Contact">
         <section class="container mx-auto my-12">
             <h2 class="text-5xl">Contact Me</h2>
@@ -167,10 +219,8 @@
                 <div>
                     <p class="text-gray-500 border-b border-gray-500 py-2">01</p>
                     <h3 class="text-2xl my-6">Front-End Development</h3>
-                    <p class="text-gray-300">
-                        User interface
-                    </p>
-                    <ul class="my-6 space-y-3  text-lg ">
+                    <p class="text-gray-300">User interface</p>
+                    <ul class="my-6 space-y-3 text-lg">
                         <li><a href="#">HTML</a></li>
                         <li><a href="#">CSS</a></li>
                         <li><a href="#"> Tailwind CSS</a></li>
@@ -180,9 +230,8 @@
                 <div>
                     <p class="text-gray-500 border-b border-gray-500 py-2">02</p>
                     <h3 class="text-2xl my-6">Back-End Development:</h3>
-                    <p class="text-gray-300">Data handling
-                    </p>
-                    <ul class="my-6 space-y-3  text-lg ">
+                    <p class="text-gray-300">Data handling</p>
+                    <ul class="my-6 space-y-3 text-lg">
                         <li><a href="#"> Node.js</a></li>
                         <li><a href="#">MongoDB</a></li>
                     </ul>
@@ -190,9 +239,8 @@
                 <div>
                     <p class="text-gray-500 border-b border-gray-500 py-2">03</p>
                     <h3 class="text-2xl my-6">Full-Stack Development:</h3>
-                    <p class="text-gray-300">MERN Stack
-                    </p>
-                    <ul class="my-6 space-y-3  text-lg ">
+                    <p class="text-gray-300">MERN Stack</p>
+                    <ul class="my-6 space-y-3 text-lg">
                         <li><a href="#">MongoDB</a></li>
                         <li><a href="#"> Express.js</a></li>
                         <li><a href="#">React.js</a></li>
@@ -200,28 +248,36 @@
                     </ul>
                 </div>
             </div>
-            <small class="text-gray-300 text-xl ">Ideal for websites, web apps, and brand design projects, custom code
-                solution, blogs and app
-                dashboard design.</small>
+            <small class="text-gray-300 text-xl">Ideal for websites, web apps, and brand design projects, custom code
+                solution, blogs and app dashboard design.</small>
 
-            <p class="text-gray-500 border-b border-gray-500 py-2 uppercase mt-15 mb-4 text-xl " id="evelopment">Social
-                Media</p>
+            <p class="text-gray-500 border-b border-gray-500 py-2 uppercase mt-15 mb-4 text-xl" id="evelopment">
+                Social Media
+            </p>
             <ul class="flex gap-4">
-                <li><a href="https://twitter.com/AliFaro45370063"
-                        class="hover:opacity-80 transition opacity-60 text-2xl">Twitter</a></li>
-                <li><a href="https://www.facebook.com/ali.farooq.1447342"
-                        class="hover:opacity-80 transition opacity-60 text-2xl">Facebook</a></li>
-                <li><a href="https://github.com/ALiraza4278"
-                        class="hover:opacity-80 transition opacity-60 text-2xl">Github</a></li>
-                <li><a href="https://www.linkedin.com/in/ali-farooq-4a5762282/"
-                        class="hover:opacity-80 transition opacity-60 text-2xl">Linkedin</a></li>
+                <li>
+                    <a href="https://twitter.com/AliFaro45370063"
+                        class="hover:opacity-80 transition opacity-60 text-2xl">Twitter</a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/ali.farooq.1447342"
+                        class="hover:opacity-80 transition opacity-60 text-2xl">Facebook</a>
+                </li>
+                <li>
+                    <a href="https://github.com/ALiraza4278"
+                        class="hover:opacity-80 transition opacity-60 text-2xl">Github</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/ali-farooq-4a5762282/"
+                        class="hover:opacity-80 transition opacity-60 text-2xl">Linkedin</a>
+                </li>
             </ul>
             <div class="flex gap-1 my-10">
-                <img class="w-16 h-16 rounded-full mr-3" src="WhatsApp Image 2023-09-02 at 01.30.16.jpg" alt="">
+                <img class="w-16 h-16 rounded-full mr-3" src="Images/myPic.png" alt="" />
 
-                <a class="bg-gray-800 text-white  p-4  text-2xl rounded-full hover:opacity-80" href="#Projects">Explore
+                <a class="bg-blue-800 text-white p-4 text-2xl rounded-full hover:opacity-80" href="#Projects">Explore
                     Work</a>
-                <a class="bg-purple-900 text-white p-4 rounded-full hover:opacity-80 group" href="#">
+                <a class="bg-sky-800 text-white p-4 rounded-full hover:opacity-80 group" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" class="transition -rotate-45 group-hover:-rotate-0"
                         width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none"
                         stroke-linecap="round" stroke-linejoin="round">
@@ -234,11 +290,11 @@
             </div>
             <div>
                 <small class="text-gray-500 border-b border-gray-500 py-2 uppercase mt-15 mb-4 text-xl">Don't Know if
-                    fits your needs or not? <a class="underline"
-                        href="https://www.linkedin.com/messaging/thread/new/">Let's have a chat</a></small>
+                    fits your needs or not?
+                    <a class="underline" href="https://www.linkedin.com/messaging/thread/new/">Let's have a
+                        chat</a></small>
             </div>
         </section>
-
     </footer>
 </body>
 
