@@ -4,45 +4,171 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Ali Raza - Portfolio</title>
     <link rel="shortcut icon" href="Images/logo.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        @keyframes animate {
-            100% {
-                transform: scaleX(1);
-            }
-        }
-
-        df-messenger {
-            --df-messenger-border-radius: 20px;
-            --df-messenger-bot-message: #404558;
-            --df-messenger-button-titlebar-color: #337ab7;
-            --df-messenger-chat-background-color: #337ab7;
-            --df-messenger-font-color: white;
-            --df-messenger-send-icon: #878fac;
-            --df-messenger-user-message: #479b3d;
-            --df-messenger-own-message: #479b3d;
-        }
-    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body
-    class="px-5 py-5 mt-0 bg-gray-900 sm:space-y-40 space-y-96 text-gray-300 scroll-smooth overflow-x-hidden overflow-y-scroll "
-    data-bs-theme="dark">
-    <div class="h-[80vh] ">
-        <!-- Top Section  -->
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        scroll-behavior: smooth;
+        font-family: "poppins", sans-serif;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    @keyframes animate {
+        100% {
+            transform: scaleX(1);
+        }
+    }
+
+    /* Styles for screens wider than 1000px */
+    @media (min-width: 777px) {
+
+
+        #text-section h1,
+        h3,
+        p {
+            align-items: left;
+            /* Default alignment */
+            text-align: left;
+            /* Default text alignment */
+            justify-content: flex-start;
+            /* Default justification */
+        }
+    }
+
+    /* Styles for screens 1000px or narrower */
+    @media (max-width: 778px) {
+        #text-section {
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    /* Custom keyframes */
+    @keyframes words {
+
+        0%,
+        20% {
+            content: 'Web Developer';
+        }
+
+        21%,
+        40% {
+            content: 'Chatbot Developer';
+        }
+
+        41%,
+        60% {
+            content: 'Web Designer';
+        }
+
+        61%,
+        80% {
+            content: 'Photographer';
+        }
+
+        81%,
+        100% {
+            content: 'Youtuber';
+        }
+    }
+
+    @keyframes typing {
+
+        10%,
+        15%,
+        30%,
+        35%,
+        50%,
+        55%,
+        70%,
+        75%,
+        90%,
+        95% {
+            width: 0;
+        }
+
+        5%,
+        20%,
+        25%,
+        40%,
+        45%,
+        60%,
+        65%,
+        80%,
+        85% {
+            width: calc(100% + 8px);
+        }
+    }
+
+    /* Apply the animation */
+    .typing-text::before {
+        content: 'Web & Chatbot Developer';
+        color: #1e40af;
+        /* Blue-700 color from Tailwind */
+        animation: words 15s infinite;
+    }
+
+    .typing-text::after {
+        content: '';
+        background-color: rgb(17 24 39);
+        position: absolute;
+        width: calc(100% + 10px);
+        height: 105%;
+        right: -8px;
+        animation: cursor 0.6s infinite, typing 15s steps(14) infinite;
+    }
+
+    .icon-size {
+        font-size: 1.5rem;
+        /* Adjust as needed */
+        transition: transform 0.3s ease-in-out;
+        /* Smooth transition effect */
+    }
+
+    .icon-size:hover {
+        transform: scale(1.25);
+        /* Scale up on hover */
+    }
+
+    df-messenger {
+        --df-messenger-border-radius: 20px;
+        --df-messenger-bot-message: #404558;
+        --df-messenger-button-titlebar-color: #337ab7;
+        --df-messenger-chat-background-color: #337ab7;
+        --df-messenger-font-color: white;
+        --df-messenger-send-icon: #878fac;
+        --df-messenger-user-message: #479b3d;
+        --df-messenger-own-message: #479b3d;
+    }
+</style>
+</head>
+
+<body class="px-5 py-5 mt-0 bg-gray-900 sm:space-y-40 space-y-96 text-gray-300 scroll-smooth overflow-x-hidden overflow-y-scroll " data-bs-theme="dark">
+    <div class="  " id="home1">
+        <!-- Top Section (Navbar remains unchanged) -->
         <nav class="flex flex-col md:flex-row items-center gap-4 container mx-auto mt-2 my-12">
-            <img class="w-20 h-20 md:w-40 md:h-40 rounded-full" src="Images/myPic.png" alt="" />
-            <p class="text-3xl font-bold">@Ali Raza</p>
+
+            <p class="text-5xl  text-white font-extrabold">Ali <Span class="text-blue-700-900 ">Raza</Span></p>
             <ul class="flex border rounded-full md:ml-auto">
                 <li class="px-6 py-4 border rounded-full text-xl">
                     <a href="#about">Home</a>
@@ -50,37 +176,87 @@
                 <li class="px-6 py-4 text-xl"><a href="#About">About</a></li>
                 <li class="px-6 py-4 text-xl"><a href="#skills">Skills</a></li>
                 <li class="px-6 py-4 text-xl"><a href="#Projects">Projects</a></li>
-                <li class="px-6 py-4 text-xl"><a href="#solutions">Contact</a></li>
+                <li class="px-6 py-4 text-xl"><a href="#Contact">Contact</a></li>
             </ul>
         </nav>
 
-        <header class="container px-auto mx-auto mt-[24vh]" id="#About">
-            <h2 class="text-7xl text-center ">
-                Hello, I'm Ali Raza <br />
-                A Web & AI chatbot developer in training.
-            </h2>
+        <section id="home" class="flex flex-col md:flex-row justify-center  gap-8 px-4 md:px-8 min-[500px]:h-[85vh]  h-[80vh] align-items-center mx-[10vw]">
+            <!-- Container for centering content -->
+            <img 
+            src="/images/myPic.png" 
+            alt="Ali Raza"
+            width={700} 
+            height={400} 
+            class="w-[220px] h-[212px] mt-50 md:mt-0 rounded-full shadow-lg shadow-blue-600 transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer
+                       sm:w-[200px] sm:h-[200px] 
+                       md:w-[700px] md:h-[400px]
+                       xs:w-[250px] xs:h-[250px]"/>
+        
+                <!-- Text Section -->
+                <div class="text-center md:text-left px-4 md:px-0" id="text-section">
+                    <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-6xl font-bold max-w-full ">Hi, It's <span
+                            class="text-blue-600">Ali Raza</span></h1>
+                    <h3 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-4 max-w-full ">I'm a <span
+                            class="relative inline-block typing-text"></span></h3>
+                    <p
+                        class="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mt-4 max-w-full mx-auto md:mx-0">
+                        "Hi, I'm Ali Raza, a 19-year-old web and chatbot developer with a passion for crafting
+                        innovative digital solutions. With a strong foundation in programming languages like HTML, CSS &
+                        JavaScript, I design and develop responsive websites and conversational chatbots that engage
+                        users and simplify interactions".</p>
 
-            <div class="flex mt-10 space-x-3 mx-auto justify-center">
-                <a class="bg-blue-800 text-white p-4 text-2xl rounded-full hover:opacity-80" href="#Projects">Explore
-                    Work</a>
-                <a class="bg-sky-800 text-white p-4 rounded-full hover:opacity-80 group" href="#Projects">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="transition -rotate-45 group-hover:-rotate-0"
-                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M5 12l14 0"></path>
-                        <path d="M13 18l6 -6"></path>
-                        <path d="M13 6l6 6"></path>
-                    </svg>
-                </a>
+                    <!-- Social Icons -->
+                    <div class="flex justify-center md:justify-start space-x-4 mt-8">
+                        <a href="https://www.linkedin.com/in/ali-raza-4a5762282/" target="_blank"
+                            class="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 flex justify-center items-center border-2 border-blue-600 rounded-full text-blue-600 hover:bg-blue-600 hover:text-black transition duration-300">
+                            <i class="fa-brands fa-linkedin icon-size"></i>
+                        </a>
+                        <a href="https://github.com/ALIRAZA4278" target="_blank"
+                            class="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 flex justify-center items-center border-2 border-blue-600 rounded-full text-blue-600 hover:bg-blue-600 hover:text-black transition duration-300">
+                            <i class="fa-brands fa-github icon-size"></i>
+                        </a>
+                        <a href="https://x.com/AliFaro45370063" target="_blank"
+                            class="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 flex justify-center items-center border-2 border-blue-600 rounded-full text-blue-600 hover:bg-blue-600 hover:text-black transition duration-300">
+                            <i class="fa-brands fa-x-twitter icon-size"></i>
+                        </a>
+                        <a href="https://instagram.com/its_zyrox_x" target="_blank"
+                            class="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 flex justify-center items-center border-2 border-blue-600 rounded-full text-blue-600 hover:bg-blue-600 hover:text-black transition duration-300">
+                            <i class="fa-brands fa-instagram icon-size"></i>
+                        </a>
+                    </div>
+
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col md:flex-row mt-0   space-y-4 md:space-y-0 md:space-x-4 mx-auto">
+                        <a href="#Projects"
+                            class="bg-blue-800 text-white p-4 text-xl rounded-full hover:opacity-80 transition-opacity duration-300 text-center mt-4">
+                            Explore Work
+                        </a>
+                        <!-- <a href="#Projects" class="bg-sky-800 text-white p-4 rounded-full hover:opacity-80 group text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="transition -rotate-45 group-hover:rotate-0"
+                                width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M5 12l14 0"></path>
+                                <path d="M13 18l6 -6"></path>
+                                <path d="M13 6l6 6"></path>
+                            </svg>
+                        </a> -->
+                    </div>
+                </div>
             </div>
-        </header>
+        </section>
+
+
+
+
     </div>
 
 
 
+
     <!-- About section -->
-    <section class="container mx-auto my-11" id="About">
+    <section class="container mx-auto my-5" id="About">
         <!-- class="md:max-w-2xl lg:max-w-3xl xl:max-w-5xl ml-auto" PHLE ABOUT K DIV KI CLASS YA THI -->
         <div class="ml-auto">
             <h1 class="text-5xl leading-10q my-6">About Me</h1>
@@ -215,22 +391,22 @@
     <!-- Projects section -->
 
     <section class="container mx-auto my-12" id="Projects">
-        <h1 class="text-5xl leading-10q my-6">Projects</h1>
-        <div class="card-group gap-6 my-12 flex flex-wrap">
-            <div class="card ">
-                <img src="Images/Project-1.png" class="card-img-top h-50" alt="..."
+        <h1 class="text-5xl  my-6">Projects</h1>
+        <div class="card-group gap-6 my-10 flex flex-wrap">
+            <div class="card">
+                <img src="Images/resume-builder.png" class="card-img-top h-50" alt="..."
                     class="img-fluid w-40 h-16 rounded d-block mb-4" />
                 <div class="card-body">
-                    <h5 class="card-title text-3xl font-bold">Calculator</h5>
+                    <h5 class="card-title text-3xl font-bold">Resume Builder</h5>
                     <p class="card-text text-xl">
-                        "Empower your daily calculations with my progressive web app
-                        calculator, designed for efficiency and accessibility."
+                        "Generate a professional-looking resume with my Resume Builder
+                        web app, featuring comprehensive templates and intuitive features."
                     </p>
-                    <a href="https://calculator-bice-alpha.vercel.app/"><button
+                    <a href="https://resume-builder--inky.vercel.app" target="_blank"><button
                             class="btn btn-primary btn-lg duration-[400ms] btn-block mt-4 bg-blue-800 border-2 border-gray-900 hover:bg-gray-900 hover:border-gray-900">
                             View
                         </button></a>
-                    <a href="https://github.com/ALIRAZA4278/Calculator"><button
+                    <a href="https://github.com/ALIRAZA4278/Resume_builder" target="_blank"><button
                             class="btn btn-primary btn-lg duration-[400ms] btn-block mt-4 bg-gray-900">
                             Source Code
                         </button></a>
@@ -241,18 +417,18 @@
                 </div>
             </div>
             <div class="card">
-                <img src="Images/Project-2.png" class="card-img-top h-50" alt="..." />
+                <img src="Images/news-app.png" class="card-img-top h-50" alt="..." />
                 <div class="card-body">
                     <h5 class="card-title text-3xl font-bold">News App</h5>
                     <p class="card-text text-xl">
                         "Stay informed with my intuitive news progressive web app,
                         delivering curated updates right at your fingertips."
                     </p>
-                    <a href="https://news-app-flame-eta.vercel.app/"><button
+                    <a href="https://news-app-flame-eta.vercel.app/" target="_blank"><button
                             class="btn btn-primary btn-lg duration-[400ms] btn-block mt-4 bg-blue-800 border-2 border-gray-900 hover:bg-gray-900 hover:border-gray-900">
                             View
                         </button></a>
-                    <a href="https://github.com/ALIRAZA4278/News-App"><button
+                    <a href="https://github.com/ALIRAZA4278/News-App" target="_blank"><button
                             class="btn btn-primary btn-lg duration-[400ms] btn-block mt-4 bg-gray-900">
                             Source Code
                         </button></a>
@@ -263,18 +439,18 @@
                 </div>
             </div>
             <div class="card">
-                <img src="Images/Project-4.jpg" class="card-img-top h-50" alt="..." />
+                <img src="Images/pizza chatbot.jpg" class="card-img-top h-50" alt="..." />
                 <div class="card-body">
                     <h5 class="card-title text-3xl font-bold">Pizza Chatbot</h5>
                     <p class="card-text text-xl">
                         "Experience the ultimate pizza ordering convenience with our Dialogflow-powered chatbot, making
                         every craving just a chat away!"
                     </p>
-                    <a href="https://pizza-chatbot.vercel.app/"><button
+                    <a href="https://pizza-chatbot.vercel.app/" target="_blank"><button
                             class="btn btn-primary btn-lg duration-[400ms] btn-block mt-4 bg-blue-800 border-2 border-gray-900 hover:bg-gray-900 hover:border-gray-900">
                             View
                         </button></a>
-                    <a href="https://github.com/ALIRAZA4278/PIZZA_CHATBOT.git"><button
+                    <a href="https://github.com/ALIRAZA4278/PIZZA_CHATBOT.git" target="_blank"><button
                             class="btn btn-primary btn-lg duration-[400ms] btn-block mt-4 bg-gray-900">
                             Source Code
                         </button></a>
@@ -284,9 +460,37 @@
                     </small>
                 </div>
             </div>
+            </div>
+        </div>
+
+        <!-- Part 2 -->
+        <div class="card-group gap-6 my-12 flex flex-wrap">
+            <div class="card ">
+                <img src="Images/calculator.png" class="card-img-top h-50" alt="..."
+                    class="img-fluid w-40 h-16 rounded d-block mb-4" />
+                <div class="card-body">
+                    <h5 class="card-title text-3xl font-bold">Calculator</h5>
+                    <p class="card-text text-xl">
+                        "Empower your daily calculations with my progressive web app
+                        calculator, designed for efficiency and accessibility."
+                    </p>
+                    <a href="https://calculator-bice-alpha.vercel.app/" target="_blank"><button
+                            class="btn btn-primary btn-lg duration-[400ms] btn-block mt-4 bg-blue-800 border-2 border-gray-900 hover:bg-gray-900 hover:border-gray-900">
+                            View
+                        </button></a>
+                    <a href="https://github.com/ALIRAZA4278/Calculator" target="_blank"><button
+                            class="btn btn-primary btn-lg duration-[400ms] btn-block mt-4 bg-gray-900">
+                            Source Code
+                        </button></a>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary text-sm">Email: af912923@gmail.com
+                    </small>
+                </div>
+            </div>
 
             <div class="card">
-                <img src="Images/Project-3.png" class="card-img-top h-50" alt="..." />
+                <img src="Images/weather app.png" class="card-img-top h-50" alt="..." />
                 <div class="card-body">
                     <h5 class="card-title text-3xl font-bold">Weather App</h5>
                     <p class="card-text text-xl">
@@ -294,11 +498,11 @@
                         progressive web app, providing real-time forecasts tailored to
                         your location."
                     </p>
-                    <a href="https://weather-app-sigma-mocha-92.vercel.app/"><button
+                    <a href="https://weather-app-sigma-mocha-92.vercel.app/" target="_blank"><button
                             class="btn btn-primary btn-lg duration-[400ms] btn-block mt-4 bg-blue-800 border-2 border-gray-900 hover:bg-gray-900 hover:border-gray-900">
                             View
                         </button></a>
-                    <a href="https://github.com/ALIRAZA4278/Weather-app"><button
+                    <a href="https://github.com/ALIRAZA4278/Weather-app" target="_blank"><button
                             class="btn btn-primary btn-lg duration-[400ms] btn-block mt-4 bg-gray-900">
                             Source Code
                         </button></a>
@@ -308,113 +512,213 @@
                     </small>
                 </div>
             </div>
+        
+
+
+            <div class="card">
+                <img src="Images/votehub.png" class="card-img-top h-50" alt="..." />
+                <div class="card-body">
+                    <h5 class="card-title text-3xl font-bold">Vote hub</h5>
+                    <p class="card-text text-xl">
+                        "Elevate your voting experience with my Vote Hub web app, featuring
+                        intuitive features and a seamless voting experience."
+                    </p>
+                    <a href="https://vote-hub-6iqt.vercel.app/" target="_blank"><button
+                            class="btn btn-primary btn-lg duration-[400ms] btn-block mt-4 bg-blue-800 border-2 border-gray-900 hover:bg-gray-900 hover:border-gray-900">
+                            View
+                        </button></a>
+                    <a href="https://github.com/ALIRAZA4278/Vote_Hub" target="_blank"><button
+                            class="btn btn-primary btn-lg duration-[400ms] btn-block mt-4 bg-gray-900">
+                            Source Code
+                        </button></a>
+                </div>
+                <div class="card-footer text-xl">
+                    <small class="text-body-secondary">Email: af912923@gmail.com
+                    </small>
+                </div>
+            </div>
+          
+           
+
+           
+            </div>
         </div>
+    </section>
     </section>
 
 
 
     <!-- Contact section -->
     <footer class="bg-gray-900 text-white py-12 p-4 -m-4" id="Contact">
-        <hr>
-        <section class="container mx-auto my-12">
-            <h2 class="text-5xl text-center font-bold mb-12 ">Contact Me</h2>
+        <section class="contact" id="contact">
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                <div>
-                    <p class="text-gray-500 border-b border-gray-500 py-2">01</p>
-                    <h3 class="text-2xl my-6 font-bold text-gray-300 uppercase tracking-widest">Front-End Development
-                    </h3>
-                    <p class="text-gray-300 text-xl">User interface</p>
-                    <ul class="my-6 space-y-3 text-xl">
-                        <li><a href="#">HTML</a></li>
-                        <li><a href="#">CSS</a></li>
-                        <li><a href="#"> Tailwind CSS</a></li>
-                        <li><a href="#"> JavaScript</a></li>
-                    </ul>
+            <hr>
+
+            <section class="container mx-auto my-12">
+
+                <div id="form-container"
+                    class="min-h-screen flex items-center justify-center  from-blue-900 to-indigo-900 p-8">
+                    <form action="https://api.web3forms.com/submit" method="POST"
+                        class="w-full max-w-3xl mx-auto p-10 bg-gray-900 rounded-3xl shadow-2xl border border-gray-700">
+                        <!-- Replace with your Access Key -->
+                        <input type="hidden" name="access_key" value="b60b9c26-8567-4e57-baa2-98262de4f80d">
+
+                        <!-- Form Header -->
+                        <h2 class="text-3xl font-bold text-white text-center mb-8">Contact Us</h2>
+
+                        <!-- Name Input -->
+                        <div class="mb-6">
+                            <label for="name" class="block text-xl font-semibold text-white mb-2">Name</label>
+                            <input type="text" name="name" id="name" required
+                                class="w-full p-4 text-black font-bold bg-gray-800 border border-gray-600 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 focus:bg-white transition duration-300 ease-in-out">
+                        </div>
+
+                        <!-- Email Input -->
+                        <div class="mb-6">
+                            <label for="email" class="block text-xl font-semibold text-white mb-2">Email</label>
+                            <input type="email" name="email" id="email" required
+                                class="w-full p-4 text-black font-bold bg-gray-800 border border-gray-600 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 focus:bg-white transition duration-300 ease-in-out">
+                        </div>
+
+                        <!-- Phone number Input -->
+                        <div class="mb-6">
+                            <label for="Phone-number" class="block text-xl font-semibold text-white mb-2">Phone
+                                Number</label>
+                            <input type="tel" name="Phone number" id="Phone-number" required
+                                class="w-full p-4 text-black font-bold bg-gray-800 border border-gray-600 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 focus:bg-white transition duration-300 ease-in-out">
+                        </div>
+
+                        <!-- Subject Input -->
+                        <div class="mb-6">
+                            <label for="Subject" class="block text-xl font-semibold text-white mb-2">Subject</label>
+                            <input type="text" name="Subject" id="Subject" required
+                                class="w-full p-4 text-black font-bold bg-gray-800 border border-gray-600 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 focus:bg-white transition duration-300 ease-in-out">
+                        </div>
+
+                        <!-- Message Input -->
+                        <div class="mb-6">
+                            <label for="message" class="block text-xl font-semibold text-white mb-2">Message</label>
+                            <textarea name="message" id="message" rows="5" required
+                                class="w-full p-4 text-black font-bold bg-gray-800 border border-gray-600 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 focus:bg-white transition duration-300 ease-in-out"></textarea>
+                        </div>
+
+
+                        <!-- hCaptcha Section -->
+                        <div class="h-captcha" data-captcha="true"></div>
+
+                        <!-- Submit Button -->
+                        <div class="text-center">
+                            <button type="submit"
+                                class="btn btn-primary btn-lg durag-option-[400ms] btn-block mt-4 bg-blue-800 hover:border-2 border-gray-900 hover:bg-gray-900 hover:border-gray-900 w-full py-4 px-8  text-white text-xl font-bold rounded-full shadow-lg hover:shadow-xl hover:border-solid hover:border-gray-800 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:rinacity-50 transition duration-300 ease-in-out transform hover:scale-105 hover:border-2 ">
+                                Submit Form
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <hr>
+
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <div>
+                        <p class="text-gray-500 border-b border-gray-500 py-2">01</p>
+                        <h3 class="text-2xl my-6 font-bold text-gray-300 uppercase tracking-widest">Front-End
+                            Development
+                        </h3>
+                        <p class="text-gray-300 text-xl">User interface</p>
+                        <ul class="my-6 space-y-3 text-xl">
+                            <li><a href="#">HTML</a></li>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#"> Tailwind CSS</a></li>
+                            <li><a href="#"> JavaScript</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 border-b border-gray-500 py-2">02</p>
+                        <h3 class="text-2xl my-6 font-bold text-gray-300 uppercase tracking-widest">Back-End
+                            Development:
+                        </h3>
+                        <p class="text-gray-300 text-xl">Data handling</p>
+                        <ul class="my-6 space-y-3 text-xl">
+                            <li><a href="#"> Node.js</a></li>
+                            <li><a href="#">MongoDB</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 border-b border-gray-500 py-2">03</p>
+                        <h3 class="text-2xl my-6 font-bold text-gray-300 uppercase tracking-widest">Full-Stack
+                            Development:
+                        </h3>
+                        <p class="text-gray-300 text-xl">MERN Stack</p>
+                        <ul class="my-6 space-y-3 text-xl">
+                            <li><a href="#">MongoDB</a></li>
+                            <li><a href="#"> Express.js</a></li>
+                            <li><a href="#">React.js</a></li>
+                            <li><a href="#"> Node.js</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <small class="text-gray-300 text-xl mt-12 text-center block ">Ideal for websites, web apps, and brand
+                    design
+                    projects, custom code
+                    solution, blogs and app dashboard design.</small>
+
+                <p class="text-gray-500 border-b border-gray-500 py-2 uppercase mt-15 mb-4 text-xl font-bold tracking-widest "
+                    id="evelopment">
+                    Social Media
+                </p>
+                <ul class="flex gap-4">
+                    <li>
+                        <a href="https://twitter.com/AliFaro45370063" target="_blank"
+                            class="hover:opacity-80 transition opacity-60 text-2xl">Twitter</a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/ali.farooq.1447342" target="_blank"
+                            class="hover:opacity-80 transition opacity-60 text-2xl">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/ALiraza4278" target="_blank"
+                            class="hover:opacity-80 transition opacity-60 text-2xl">Github</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/ali-farooq-4a5762282/" target="_blank"
+                            class="hover:opacity-80 transition opacity-60 text-2xl">Linkedin</a>
+                    </li>
+                </ul>
+                <div class="flex gap-1 my-10 ">
+                    <img class="w-20 h-20 rounded-full mr-3 " src="Images/myPic.png" alt="" />
+
+                    <a class="bg-blue-800 text-white p-4 text-2xl rounded-full hover:opacity-80"
+                        href="#Projects">Explore
+                        Work</a>
+                    <a class="bg-sky-800 text-white p-4 rounded-full hover:opacity-80 group" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="transition -rotate-45 group-hover:-rotate-0"
+                            width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M5 12l14 0"></path>
+                            <path d="M13 18l6 -6"></path>
+                            <path d="M13 6l6 6"></path>
+                        </svg>
+                    </a>
                 </div>
                 <div>
-                    <p class="text-gray-500 border-b border-gray-500 py-2">02</p>
-                    <h3 class="text-2xl my-6 font-bold text-gray-300 uppercase tracking-widest">Back-End Development:
-                    </h3>
-                    <p class="text-gray-300 text-xl">Data handling</p>
-                    <ul class="my-6 space-y-3 text-xl">
-                        <li><a href="#"> Node.js</a></li>
-                        <li><a href="#">MongoDB</a></li>
-                    </ul>
+                    <small class="text-gray-500 border-b border-gray-500 py-2 uppercase mt-15 mb-4 text-xl">Don't Know
+                        if
+                        fits your needs or not?
+                        <a class="underline" href="https://www.linkedin.com/messaging/thread/new/" target="_blank">Let's
+                            have a
+                            chat</a></small>
                 </div>
-                <div>
-                    <p class="text-gray-500 border-b border-gray-500 py-2">03</p>
-                    <h3 class="text-2xl my-6 font-bold text-gray-300 uppercase tracking-widest">Full-Stack Development:
-                    </h3>
-                    <p class="text-gray-300 text-xl">MERN Stack</p>
-                    <ul class="my-6 space-y-3 text-xl">
-                        <li><a href="#">MongoDB</a></li>
-                        <li><a href="#"> Express.js</a></li>
-                        <li><a href="#">React.js</a></li>
-                        <li><a href="#"> Node.js</a></li>
-                    </ul>
-                </div>
-            </div>
-            <small class="text-gray-300 text-xl mt-12 text-center block ">Ideal for websites, web apps, and brand design
-                projects, custom code
-                solution, blogs and app dashboard design.</small>
-
-            <p class="text-gray-500 border-b border-gray-500 py-2 uppercase mt-15 mb-4 text-xl font-bold tracking-widest "
-                id="evelopment">
-                Social Media
-            </p>
-            <ul class="flex gap-4">
-                <li>
-                    <a href="https://twitter.com/AliFaro45370063"
-                        class="hover:opacity-80 transition opacity-60 text-2xl">Twitter</a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/ali.farooq.1447342"
-                        class="hover:opacity-80 transition opacity-60 text-2xl">Facebook</a>
-                </li>
-                <li>
-                    <a href="https://github.com/ALiraza4278"
-                        class="hover:opacity-80 transition opacity-60 text-2xl">Github</a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/ali-farooq-4a5762282/"
-                        class="hover:opacity-80 transition opacity-60 text-2xl">Linkedin</a>
-                </li>
-            </ul>
-            <div class="flex gap-1 my-10 ">
-                <img class="w-20 h-20 rounded-full mr-3 " src="Images/myPic.png" alt="" />
-
-                <a class="bg-blue-800 text-white p-4 text-2xl rounded-full hover:opacity-80" href="#Projects">Explore
-                    Work</a>
-                <a class="bg-sky-800 text-white p-4 rounded-full hover:opacity-80 group" href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="transition -rotate-45 group-hover:-rotate-0"
-                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M5 12l14 0"></path>
-                        <path d="M13 18l6 -6"></path>
-                        <path d="M13 6l6 6"></path>
-                    </svg>
-                </a>
-            </div>
-            <div>
-                <small class="text-gray-500 border-b border-gray-500 py-2 uppercase mt-15 mb-4 text-xl">Don't Know if
-                    fits your needs or not?
-                    <a class="underline" href="https://www.linkedin.com/messaging/thread/new/">Let's have a
-                        chat</a></small>
-            </div>
-        </section>
+            </section>
 
     </footer>
 
 
+    <script src="script.js"></script>
     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-    <df-messenger
-      intent="WELCOME"
-      chat-title="Ali_Raza"
-      agent-id="4f4d084a-16f9-455a-a64e-08d66d441703"
-      language-code="en"
-    ></df-messenger>
+    <df-messenger intent="WELCOME" chat-title="Ali_Raza" agent-id="4f4d084a-16f9-455a-a64e-08d66d441703"
+        language-code="en"></df-messenger>
 </body>
 
 </html>
